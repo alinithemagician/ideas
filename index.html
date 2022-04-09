@@ -27,7 +27,8 @@
       let idea;
       do {
         idea = ideas[Math.floor(Math.random() * ideas.length)];
-      } while(ideas.length !== 1 && currentIdea === idea);
+        if(!idea) idea = '';
+      } while(ideas.length > 1 && currentIdea === idea);
 
       currentIdea = idea;
 
